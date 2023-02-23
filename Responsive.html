@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo de CSS responsive</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			font-size: 24px;
+		}
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			margin: 20px 0;
+		}
+		article {
+			flex-basis: calc(33.33% - 20px);
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			padding: 20px;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Ejemplo de CSS responsive</h1>
+	</header>
+	<div class="container">
+		<section>
+			<article>
+				<img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" alt="Imagen 1">
+				<h2>Imagen 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec nibh eget odio imperdiet commodo eu sed orci.</p>
+			</article>
+			<article>
+				<img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" alt="Imagen 2">
+				<h2>Imagen 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec nibh eget odio imperdiet commodo eu sed orci.</p>
+			</article>
+			<article>
+				<img src="https://concepto.de/wp-content/uploads/2015/03/paisaje-e1549600034372.jpg" alt="Imagen 3">
+				<h2>Imagen 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec nibh eget odio imperdiet commodo eu sed orci.</p>
+			</article>
+		</section>
+	</div>
+</body>
+</html>
