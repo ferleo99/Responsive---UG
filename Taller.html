@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ciudad Mitad del Mundo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5f5;
+		}
+      	.header {
+		background-color: #008080;
+		color: #fff;
+		padding: 20px;
+		text-align: center;
+	}
+	
+	h1 {
+		margin: 0;
+	}
+	
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	
+	.image {
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: 20px 0;
+	}
+	
+	.info {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+	
+	.info p {
+		flex-basis: 100%;
+		text-align: justify;
+		margin: 10px;
+	}
+	
+	.distance-form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+	
+	.distance-form label, .distance-form input {
+		margin: 10px;
+	}
+	
+	.distance-form input[type="submit"] {
+		background-color: #008080;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+	}
+	
+	.distance-result {
+		text-align: center;
+	}
+	</style>
+      <script>
+	function calculateDistance() {
+		const latitude = document.getElementById("latitude").value;
+		const longitude = document.getElementById("longitude").value;
+		const distance = Math.sqrt(Math.pow(latitude - 0, 2) + Math.pow(longitude - (-78.4678), 2));
+		document.getElementById("distance-result").innerHTML = `La distancia a la Mitad del Mundo es de ${distance} grados.`;
+	}
+</script>
+
+</head>
+<body>
+	<header class="header">
+		<h1>Ciudad Mitad del Mundo</h1>
+		<p>La mitad del mundo en Ecuador</p>
+	</header>
+  <div class="container">
+	<img class="image" src="https://3.bp.blogspot.com/-j4FS9VppMnk/WGx0isPSdSI/AAAAAAAAUW8/pgKuFP89ywg-LEudW-ReNnGXpa366Wd5QCLcB/s1600/turismo-en-quito-el-panecillo.jpg" alt="Ciudad Mitad del Mundo">
+	
+	<div class="info">
+		<p>La Ciudad Mitad del Mundo es un monumento situado en la latitud 0° 0' 0" en la provincia de Pichincha, Ecuador. El monumento conmemora el lugar donde la expedición científica francesa, liderada por Charles Marie de La Condamine, realizó la medición del ecuador terrestre en 1736-1744.</p>
+		<p>En la Ciudad Mitad del Mundo se pueden encontrar varios atractivos turísticos, como el monumento principal, un planetario, un museo etnográfico, un jardín botánico, entre otros.</p>
+	</div>
+	
+	<form class="distance-form" onsubmit="calculateDistance(); return false;">
+		<label for="latitude">Latitud:</label>
+		<input type="text" id="latitude" name="latitude" placeholder="-0.0031">
+		
+		<label for="longitude">Longitud:</label>
+		<input type="text" id="longitude" name="longitude" placeholder="-78.4557">
+		
+		<input type="submit" value="Calcular">
+          </form>
+          </html>
